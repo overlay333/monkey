@@ -9,129 +9,132 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    font-family: 'Inter', sans-serif;
-    font-size: 36px; /* increased */
-    font-weight: 600;
-    color: white;
-    overflow: hidden;
-  }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+      overflow: hidden;
+    }
 
-  .info-overlay {
-    position: absolute;
-    top: 30px; /* a bit lower for spacing */
-    left: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* increased gap */
-  }
+    .info-overlay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
 
-  .section {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* increased gap */
-  }
+    .section {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
 
-  .section .material-icons,
-  .section .material-icons-outlined {
-    font-size: 28px; /* bigger icons */
-    font-weight: 400;
-    color: white;
-    text-shadow:
-      0 0 8px rgba(0, 0, 0, 0.2),
-      0 0 10px rgba(0, 0, 0, 0.3);
-    width: 30px;        
-    text-align: center;
-    flex-shrink: 0;
-  }
+    .material-icons,
+    .material-icons-outlined {
+      font-size: 27px;
+      font-weight: 400;
+      color: white;
+      text-shadow:
+        0 0 6px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(0, 0, 0, 0.3);
+    }
 
-  .info-text {
-    font-size: 20px; /* bigger text */
-    font-weight: 400;
-    line-height: 1.2;
-    display: flex;
-    align-items: center;
-    text-shadow:
-      0 0 8px rgba(0, 0, 0, 0.2),
-      0 0 10px rgba(0, 0, 0, 0.3);
-  }
+    .info-text {
+      font-size: 17px;
+      font-weight: 800;
+      margin-top: 0px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      text-shadow:
+        0 0 6px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(0, 0, 0, 0.3);
+    }
 
-  .bottom-identity {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 16px; /* increased gap */
-  }
+    .bottom-identity {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-  .kick-logo-img {
-    width: 25px; /* bigger */
-    height: auto;
-    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
-  }
+    .kick-logo-img {
+      width: 22px;
+      height: auto;
+      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+    }
 
-  .small-name {
-    font-size: 25px; /* bigger */
-    font-weight: 600;
-    text-shadow:
-      0 0 6px rgba(0, 0, 0, 0.5),
-      0 0 8px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1.5px;
-  }
+    .small-name {
+      font-size: 24px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      text-shadow:
+        0 0 4px rgba(0, 0, 0, 0.4),
+        0 0 6px rgba(0, 0, 0, 0.4);
+      line-height: 1;
+      position: relative;
+      top: 0;
+      display: flex;
+      align-items: center;
+      letter-spacing: 1px;
+    }
 
-  .score-box {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    background: rgba(0, 0, 0, 0.6); /* slightly darker */
-    border-radius: 16px; /* bigger radius */
-    padding: 20px 25px; /* increased padding */
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    transform: scale(1); /* scale up */
-    transform-origin: top right;
-  }
+    .score-box {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 18px 23px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      transform: scale(0.9);
+      transform-origin: top right;
+    }
 
-  .score-title {
-    font-size: 18px; /* bigger */
-    font-weight: 600;
-    letter-spacing: 1.2px;
-  }
+    .score-title {
+      font-size: 13x;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-  .score-rank {
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 4px 6px; /* bigger padding */
-    border-radius: 8px;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 600;
-    font-size: 16px; /* bigger */
-    color: #00ff22;
-  }
+    .score-rank {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.48);
+      padding: 2px 5px;
+      border-radius: 6px;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 800;
+      font-size: 25px;
+      color: #00ff22;
+    }
 
-  .score-row {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* bigger gap */
-    font-size: 16px; /* bigger */
-    font-weight: 500;
-  }
+    .score-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 800;
+    }
 
-  .score-row .material-icons {
-    font-size: 20px; /* bigger */
-    color: #00ff22;
-  }
-</style>
-
+    .score-row .material-icons {
+      font-size: 20px;
+      color: #00ff22;
+    }
+  </style>
 </head>
 <body>
   <div class="info-overlay">
@@ -207,7 +210,7 @@
         const code = data.current_weather.weathercode;
         const weatherData = weatherIconMap[code] || { icon: 'help_outline', desc: 'Unknown' };
         document.getElementById('weather-icon').textContent = weatherData.icon;
-        document.getElementById('temperature').textContent = `${c}°C / ${f}°F • ${weatherData.desc}`;
+        document.getElementById('temperature').textContent = `${c}°C / ${f}°F`;
       } catch {
         document.getElementById('weather-icon').textContent = 'error_outline';
         document.getElementById('temperature').textContent = '--°C / --°F • N/A';
