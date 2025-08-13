@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>overlay</title>
+  <title>monkey</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -33,8 +33,22 @@
     .section {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px; /* Reduced slightly for tighter alignment */
     }
+
+    .section .material-icons,
+    .section .material-icons-outlined {
+      font-size: 22px;
+      font-weight: 400;
+      color: white;
+      text-shadow:
+        0 0 6px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(0, 0, 0, 0.3);
+      width: 24px;        /* Fixed width for consistent positioning */
+      text-align: center; /* Keep the icon centered within its space */
+      flex-shrink: 0;     /* Prevent icon from shrinking */
+    }
+
 
     .material-icons,
     .material-icons-outlined {
@@ -49,7 +63,6 @@
     .info-text {
       font-size: 15px;
       font-weight: 300;
-      margin-top: 0px;
       line-height: 1;
       display: flex;
       align-items: center;
@@ -69,13 +82,13 @@
     }
 
     .kick-logo-img {
-      width: 20px;
+      width: 22px;
       height: auto;
       filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
     }
 
     .small-name {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 600;
       font-family: 'Inter', sans-serif;
       text-shadow:
@@ -153,7 +166,6 @@
     <div class="small-name">TheMonkeyChannel</div>
   </div>
 
-  <!-- Scoreboard -->
   <div id="score-box" class="score-box">
     <div class="score-title">
       TheMonkeyChannel <span id="score-rank" class="score-rank">--</span>
